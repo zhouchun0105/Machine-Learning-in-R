@@ -1,0 +1,117 @@
+# Modulo
+28 %% 4
+
+# Show class
+class()
+
+# vector
+new_vec <- c('a','b','c')
+
+# Give names to your vectors with names()
+names(poker_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
+# You can add up vectors
+A_vector <- c(1, 2, 3)
+B_vector <- c(4, 5, 6)
+total_vector <- A_vector + B_vector
+
+# Slicing using vector names
+poker_start <- poker_vector[c('Monday','Tuesday','Wednesday')]
+
+# Boolean on vector
+selection_vector <- (poker_vector > 0)
+returns:
+   Monday   Tuesday Wednesday  Thursday    Friday 
+     TRUE     FALSE      TRUE     FALSE      TRUE 
+     
+# Construct a matrix with 3 rows, and filled by rows
+matrix(1:9, byrow = TRUE, nrow = 3)
+
+# Give rows and columns of a matrix names
+rownames(my_matrix) <- row_names_vector
+colnames(my_matrix) <- col_names_vector
+
+# Calculate row sums for a matrix
+rowSums(my_matrix)
+
+# colSums()
+
+# cbind() merge matrix with coloumn or matrix by columns
+big_matrix <- cbind(matrix1, matrix2, vector1 ...)
+
+# there's also rbind()
+
+# Matrix indexing
+my_matrix[1,2] selects the element at the first row and second column.
+my_matrix[1:3,2:4] results in a matrix with the data on the rows 1, 2, 3 and columns 2, 3, 4.
+my_matrix[,1] selects all elements of the first column.
+my_matrix[1,] selects all elements of the first row.
+
+# Matrix element wise calculation
+new_matrix = matrix/5 # this divide every element in the matrix by 5
+
+# Factor is used to store categorical variables
+sex_vector <- c("Male", "Female", "Female", "Male", "Male")
+factor_sex_vector <- factor(sex_vector)
+
+# Code to build factor_survey_vector
+survey_vector <- c("M", "F", "F", "M", "M")
+factor_survey_vector <- factor(survey_vector)
+
+# Specify the levels of factor_survey_vector
+levels(factor_survey_vector) <- c('Female','Male')
+
+# Complete factor code
+factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow", "medium", "fast"))
+
+# Dataframe str(df) tells you the structure of df
+
+# Use data.frame(vector1, vector2, vector3) to construct a dataframe
+
+# Slice dataframe with column name
+planets_df[1:5,'diameter']
+
+# Select a column with $
+rings_vector <- planets_df$rings
+
+# subset(), with condition stated behind df
+subset(planets_df, subset = diameter < 1)
+
+# Order and reshuffle according to order
+
+# Use order() to create positions
+positions <-  order(planets_df$diameter)
+
+# Use positions to sort planets_df
+print(planets_df[positions,])
+
+# Construct a list
+my_list <- list(my_vector, my_matrix,my_df)
+
+# Name the list after constrution
+names(my_list) <- c("vec","mat","df")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
