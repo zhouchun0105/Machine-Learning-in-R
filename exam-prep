@@ -49,5 +49,9 @@ mean_station <- batrips[, .(mean_duration = mean(duration)), by = .(start_statio
 # Top five most popular destinations
 top_5 <- batrips[, .N, by = end_station][order(-N)][1:5]
 
+# Add a new column, duration_hour
+batrips[, duration_hour := duration / 3600]
 
+# Replace negative duration values with NA
+untidy[duration < 0, duration := NA]
 
